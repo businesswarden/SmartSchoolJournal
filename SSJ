@@ -1,15 +1,15 @@
-Number = int(input("Number of students: "))
-maximum_points = int(input("Maximum score in the grading system: "))
+Number = int(input("Number of students: ")) 
+maximum_points = int(input("Maximum score in the grading system: ")) # the program takes into account the maximum assessment system in your country
 name = 0
 mark = 0
 journal = []
 marks = []
-for i in range(Number):
+for i in range(Number): # We start this cycle in order to fill in information about the names of students and their grades
     name = str(input("\nEnter the student's name: "))
     mark = int(input("Enter the student's grade: "))
-    journal.append([name, mark])
+    journal.append([name, mark]) # The program saves information about the names of students and grades through nested lists
 for i in range(len(journal)):
     marks.append(journal[i][1])
-    if journal[i][1] >= maximum_points * 0.8:
+    if journal[i][1] >= maximum_points * 0.8: #we multiply the maximum score by 0.8 to get a score from which the names of students who received a good grade will be displayed, taking into account the assessment system in your country
         print(f'Student {journal[i][0]} got a good grade')
 print(f'Average score among all students: {sum(marks) / Number}')
