@@ -10,6 +10,6 @@ for i in range(Number): # We start this cycle in order to fill in information ab
     journal.append([name, mark]) # The program saves information about the names of students and grades through nested lists
 for i in range(len(journal)):
     marks.append(journal[i][1])
-    if journal[i][1] >= maximum_points * 0.8: #we multiply the maximum score by 0.8 to get a score from which the names of students who received a good grade will be displayed, taking into account the assessment system in your country
+    if journal[i][1] >= maximum_points * 0.8: # we multiply the maximum score by 0.8 to get a score from which the names of students who received a good grade will be displayed, taking into account the assessment system in your country
         print(f'Student {journal[i][0]} got a good grade')
 print(f'Average score among all students: {sum(marks) / Number}')
