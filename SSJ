@@ -1,0 +1,15 @@
+Number = int(input("Number of students: "))
+maximum_points = int(input("Maximum score in the grading system: "))
+name = 0
+mark = 0
+journal = []
+marks = []
+for i in range(Number):
+    name = str(input("\nEnter the student's name: "))
+    mark = int(input("Enter the student's grade: "))
+    journal.append([name, mark])
+for i in range(len(journal)):
+    marks.append(journal[i][1])
+    if journal[i][1] >= maximum_points * 0.8:
+        print(f'Student {journal[i][0]} got a good grade')
+print(f'Average score among all students: {sum(marks) / Number}')
